@@ -1,0 +1,58 @@
+import importlib
+import subprocess
+import sys
+
+# Dictionary mapping the 'import name' to the 'pip install name'
+# (e.g., we import 'cv2', but we pip install 'opencv-python')
+REQUIRED_PACKAGES = {
+    "tensorflow": "tensorflow",
+    "cv2": "opencv-python",
+    "numpy": "numpy",
+    "pandas": "pandas",
+    "matplotlib": "matplotlib",
+    "sklearn": "scikit-learn"
+}
+
+def check_and_install_dependencies():
+    print("Checking project dependencies...\n")
+    missing_packages = []
+
+    # 1. Check which packages are missing
+    for import_name, pip_name in REQUIRED_PACKAGES.items():
+        try:
+            importlib.import_module(import_name)
+            print(f"[OK] {pip_name} is already installed.")
+        except ImportError:
+            print(f"[MISSING] {pip_name} is not installed.")
+            missing_packages.append(pip_name)
+
+    # 2. Handle missing packages
+    if missing_packages:
+        print("\n" + "="*40)
+        print(f"You are missing {len(missing_packages)} required package(s):")
+        for pkg in missing_packages:
+            print(f" - {pkg}")
+        print("="*40 + "\n")
+        
+        # Ask the user for permission to install
+        choice = input("Would you like to automatically download and install them now? (y/n): ").strip().lower()
+        
+        if choice in ['y', 'yes']:
+            print("\nStarting installation...")
+            for package in missing_packages:
+                print(f"Installing {package}...")
+                # sys.executable ensures we use the pip associated with the current Python environment
+                subprocess.check_call([sys.executable, "-m", "pip", "install", package])
+            
+            print("\n All missing dependencies have been successfully installed!")
+            print("You can now run your model scripts.")
+        else:
+            print("\n Installation cancelled. Please install them manually using:")
+            print(f"pip install {' '.join(missing_packages)}")
+            sys.exit(1)
+            
+    else:
+        print("\n All required dependencies are already installed. You are good to go!")
+
+if __name__ == "__main__":
+    check_and_install_dependencies()
