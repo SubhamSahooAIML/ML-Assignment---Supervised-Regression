@@ -18,6 +18,9 @@ Using Deep Learning techniques, predict the coordinates (x,y) of a pixel which h
 ## ⚙️ Installation & Setup
 [cite_start]This project includes a dependency management script for easy setup. 
 
+## for jupiter file
+you can download and check the dependency and then run the ipynb file for jupiter 
+
 1. Ensure you have Python 3.8+ installed.
 2. Open your terminal in the project directory.
 3. Run the automated dependency checker:
