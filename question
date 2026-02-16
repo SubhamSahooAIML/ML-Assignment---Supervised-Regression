@@ -1,0 +1,28 @@
+# 🤖 ML Assignment - Supervised Regression
+
+## 📝 Problem Statement
+Using Deep Learning techniques, predict the coordinates `(x, y)` of a single pixel which has a value of `255` in a given `50x50` pixel grayscale image (where all other pixels are `0`). 
+
+* **Dataset:** You may generate a dataset as required for solving the problem. 
+* **Requirement:** Please explain your rationale behind your dataset choices.
+
+---
+
+## 📤 Submission Guidelines
+* **Code & Visualization:** Share your code in a notebook with train logs and graphs showing ground truth and predicted coordinates. Show any result you might find useful.
+* **Setup:** Include any necessary dependencies and installation instructions.
+* **Code Quality:** Ensure the code follows **PEP8** standards and includes comments where necessary.
+* **Format:** Submit the assignment via a Git repository or a compressed file.
+
+---
+
+## 🎯 Evaluation Criteria
+* **Functionality:** Does the approach used meet the specified prediction requirements? *(Note: Approach is more important than pure accuracy).*
+* **Code Quality:** Is the code well-organized, readable, maintainable, and does it handle errors appropriately?
+* **Performance:** Does the model do the job as expected?
+
+---
+
+## ⏳ Timeline & Notes
+* Please submit your responses within **2-3 days** once you receive the assignment.
+* Feel free to ask for any clarifications you need.
