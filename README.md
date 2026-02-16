@@ -6,11 +6,14 @@ Using Deep Learning techniques, predict the coordinates (x,y) of a pixel which h
 [cite_start]This project solves the machine learning assignment of predicting the `(x, y)` coordinates of a single active pixel (value `255`) in a `50x50` grayscale image where all other pixels are `0`[cite: 3, 4]. It uses a Convolutional Neural Network (CNN) built with TensorFlow/Keras to perform supervised continuous regression.
 
 ## 📂 Project Structure
-* `[check_dependencies.py](https://github.com/SubhamSahooAIML/ML-Assignment---Supervised-Regression/blob/main/check_dependencies)`: An automated script to verify and install required libraries.
-* `[dataset_generator.py](https://github.com/SubhamSahooAIML/ML-Assignment---Supervised-Regression/blob/main/Loading_model.py)` *(or your filename)*: Generates the synthetic dataset of images and coordinate labels. Defines the CNN architecture, trains the model, and plots training loss.
-* `[loading_model.py](https://github.com/SubhamSahooAIML/ML-Assignment---Supervised-Regression/blob/main/Loading_model.py)`: Loads the trained model, performs inference on unseen images, and plots ground truth vs. predicted coordinates.
-* `labels.csv` & `images/`: The generated dataset (created dynamically).
-* `pixel_regression_model.keras`: The saved weights of the trained model.
+
+| File / Directory | Purpose |
+| :--- | :--- |
+| 🛠️ **[`check_dependencies.py`](https://github.com/SubhamSahooAIML/ML-Assignment---Supervised-Regression/blob/main/check_dependencies.py)** | An automated script to verify and install required libraries before running the project. |
+| ⚙️ **[`dataset_generator.py`](https://github.com/SubhamSahooAIML/ML-Assignment---Supervised-Regression/blob/main/dataset_generator.py)** | Generates the synthetic dataset (images & labels), defines the CNN architecture, trains the model, and plots training loss. |
+| 🔍 **[`loading_model.py`](https://github.com/SubhamSahooAIML/ML-Assignment---Supervised-Regression/blob/main/Loading_model.py)** | Loads the trained model, performs inference on unseen test images, and plots ground truth vs. predicted coordinates. |
+| 📦 **`pixel_regression_model.keras`** | The saved weights and architecture of the successfully trained model. |
+| 📁 **`images/`** & 📄 **`labels.csv`** | The generated dataset files (these are created dynamically when the generator script is run). |
 
 ## ⚙️ Installation & Setup
 [cite_start]This project includes a dependency management script for easy setup. 
